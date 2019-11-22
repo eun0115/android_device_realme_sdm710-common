@@ -80,13 +80,14 @@ public class FPSInfoService extends Service {
         FPSView(Context c) {
             super(c);
             float density = c.getResources().getDisplayMetrics().density;
-            int paddingPx = Math.round(9 * density);
+
+            int paddingPx = Math.round(5 * density);
             setPadding(paddingPx, paddingPx, paddingPx, paddingPx);
-            setBackgroundColor(Color.argb(0x0, 0, 0, 0));
+            setBackgroundColor(Color.argb(0x60, 0, 0, 0));
 
-            final int textSize = Math.round(16 * density);
+            final int textSize = Math.round(12 * density);
 
-            Typeface typeface = Typeface.create("googlesans", Typeface.BOLD);
+            Typeface typeface = Typeface.create("monospace", Typeface.NORMAL);
 
             mOnlinePaint = new Paint();
             mOnlinePaint.setTypeface(typeface);
@@ -131,16 +132,20 @@ public class FPSInfoService extends Service {
             }
 
             final int W = mNeededWidth;
-            final int RIGHT = getWidth()-1;
 
-            int x = RIGHT - mPaddingLeft;
+            final int LEFT = getWidth()-1;
+
+            int x = LEFT - mPaddingLeft;
+
             int top = mPaddingTop + 2;
             int bottom = mPaddingTop + mFH - 2;
 
             int y = mPaddingTop - (int)mAscent;
 
             String s=getFPSInfoString();
-            canvas.drawText(s, RIGHT-mPaddingLeft-mMaxWidth,
+
+            canvas.drawText(s, LEFT-mPaddingLeft-mMaxWidth,
+
                     y-1, mOnlinePaint);
             y += mFH;
         }
@@ -210,7 +215,9 @@ public class FPSInfoService extends Service {
             WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
             PixelFormat.TRANSLUCENT);
         params.y = 50;
-        params.gravity = Gravity.RIGHT | Gravity.TOP;
+
+        params.gravity = Gravity.LEFT | Gravity.TOP;
+
         params.setTitle("FPS Info");
 
         startThread();

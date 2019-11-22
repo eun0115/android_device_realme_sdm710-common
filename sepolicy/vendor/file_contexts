@@ -49,5 +49,6 @@
 
 /dev/block/mmcblk0p[0-9]                                           u:object_r:emmc_block_device:s0
 
+
 # FPS Info
 /sys/class/drm/sde-crtc-0/measured_fps                              u:object_r:sysfs_fps:s0
