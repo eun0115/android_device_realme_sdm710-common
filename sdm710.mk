@@ -252,9 +252,7 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl:64 \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.0-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -342,9 +340,9 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service \
-    android.hardware.power.stats@1.0-service.mock \
-    vendor.qti.hardware.perf@2.0.vendor
+    android.hardware.power-service-qti \
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service
 
 # Protobuf
 PRODUCT_PACKAGES += \
