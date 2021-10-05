@@ -9,3 +9,11 @@ ro.lmk.log_stats=true
 
 # Dex
 ro.sys.fw.dex2oat_thread_count=8
+
+# PixelBlaster
+ro.pb.maintainer=Gian Paolo Estacio
+ro.pb.soc=SDM712
+ro.pb.camera=48+8+2+2
+ro.pb.version=3.5
+ro.pb.codename=RMX1971
+ro.pb.device= Realme 5 Pro
