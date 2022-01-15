@@ -9,3 +9,6 @@ ro.lmk.log_stats=true
 
 # Dex
 ro.sys.fw.dex2oat_thread_count=8
+
+# Graphics
+debug.hwui.renderer=skiavk
